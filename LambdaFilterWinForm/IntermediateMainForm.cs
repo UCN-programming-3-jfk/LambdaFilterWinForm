@@ -39,9 +39,9 @@ public partial class IntermediateMainForm : Form
         }
     }
 
-    private void Filter(Func<Plant, bool> filter)
+    private void Filter(Predicate<Plant> filter)
     {
         _filteredPlants.Clear();
-        _plants.Where(filter).ToList().ForEach(_filteredPlants.Add);
+        _plants.Where(plant => filter(plant)).ToList().ForEach(_filteredPlants.Add);
     }
 }

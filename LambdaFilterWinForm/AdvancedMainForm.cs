@@ -14,7 +14,7 @@ public partial class AdvancedMainForm : Form
     private BindingList<Plant> _filteredPlants = new();
     
     //create a dictionary to store the filter Funcs with the checkboxes as key
-    Dictionary<CheckBox, Func<Plant, bool>> checkboxFilters = new();
+    Dictionary<CheckBox, Predicate<Plant>> checkboxFilters = new();
     public AdvancedMainForm()
     {
         InitializeComponent();
@@ -38,10 +38,7 @@ public partial class AdvancedMainForm : Form
     private void AddFlowers()
     {
         lstAllPlants.Items.Clear();
-        foreach (var item in PlantDAL.GetPlants())
-        {
-            _plants.Add(item);
-        }
+        PlantDAL.GetPlants().ToList().ForEach(_plants.Add);
     }
 
     private void Filter()
@@ -53,7 +50,7 @@ public partial class AdvancedMainForm : Form
         foreach (CheckBox box in Controls.OfType<CheckBox>().Where(chkBox => chkBox.Checked))
         {
             //find the filter in the dictionary and filter the results (again)
-            result = result.Where(checkboxFilters[box]).ToList();
+            result = result.Where(plant => checkboxFilters[box](plant)).ToList();
         }
         
         //add the filtered results to the _filteredPlants list

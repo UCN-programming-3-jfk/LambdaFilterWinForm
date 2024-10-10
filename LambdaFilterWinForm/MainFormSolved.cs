@@ -10,7 +10,6 @@ public partial class MainFormSolved : Form
         InitializeComponent();
         AddFlowers();
     }
-
     private void AddFlowers()
     {
         lstAllPlants.Items.Clear();

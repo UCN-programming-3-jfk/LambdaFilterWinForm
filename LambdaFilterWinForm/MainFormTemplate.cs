@@ -9,7 +9,6 @@ public partial class MainFormTemplate : Form
         InitializeComponent();
         AddFlowers();
     }
-
     private void AddFlowers()
     {
         foreach (var item in PlantDAL.GetPlants())
@@ -18,16 +17,8 @@ public partial class MainFormTemplate : Form
         }
     }
 
-  
-    private void Filter(Func<Plant, bool> filter)
-    {
-        lstFilteredPlants.Items.Clear();
-        foreach (var plant in lstAllPlants.Items)
-        {
-            if (filter((Plant)plant))
-            {
-                lstFilteredPlants.Items.Add(plant);
-            }
-        }
-    }
+    //Add button click handlers which send a func to the filter function
+
+    //Add filter function here, which takes a func that accepts a Plant and returns a bool
+
 }
