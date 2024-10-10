@@ -1,7 +1,7 @@
 ﻿
 namespace LambdaFilterWinForm
 {
-    partial class MainForm
+    partial class MainFormTemplate
     {
         /// <summary>
         ///  Required designer variable.
@@ -67,7 +67,6 @@ namespace LambdaFilterWinForm
             this.btnTallOnes.TabIndex = 2;
             this.btnTallOnes.Text = "&Tall ones ( > 100cm)";
             this.btnTallOnes.UseVisualStyleBackColor = true;
-            this.btnTallOnes.Click += new System.EventHandler(this.btnTallOnes_Click);
             // 
             // btnShortOnes
             // 
@@ -78,7 +77,6 @@ namespace LambdaFilterWinForm
             this.btnShortOnes.TabIndex = 2;
             this.btnShortOnes.Text = "&Short ones ( <= 100cm)";
             this.btnShortOnes.UseVisualStyleBackColor = true;
-            this.btnShortOnes.Click += new System.EventHandler(this.btnShortOnes_Click);
             // 
             // btnRedOnes
             // 
@@ -89,7 +87,6 @@ namespace LambdaFilterWinForm
             this.btnRedOnes.TabIndex = 2;
             this.btnRedOnes.Text = "&Red ones";
             this.btnRedOnes.UseVisualStyleBackColor = true;
-            this.btnRedOnes.Click += new System.EventHandler(this.btnRedOnes_Click);
             // 
             // btnYellowOnes
             // 
@@ -100,7 +97,6 @@ namespace LambdaFilterWinForm
             this.btnYellowOnes.TabIndex = 2;
             this.btnYellowOnes.Text = "&Yellow ones";
             this.btnYellowOnes.UseVisualStyleBackColor = true;
-            this.btnYellowOnes.Click += new System.EventHandler(this.btnYellowOnes_Click);
             // 
             // btnShadeTolerant
             // 
@@ -111,7 +107,6 @@ namespace LambdaFilterWinForm
             this.btnShadeTolerant.TabIndex = 2;
             this.btnShadeTolerant.Text = "T&olerates shade";
             this.btnShadeTolerant.UseVisualStyleBackColor = true;
-            this.btnShadeTolerant.Click += new System.EventHandler(this.btnShadeTolerant_Click);
             // 
             // Form1
             // 

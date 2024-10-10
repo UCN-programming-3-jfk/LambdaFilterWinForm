@@ -17,9 +17,10 @@ namespace LambdaFilterWinForm
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-            Application.Run(new IntermediateMainForm());
-            Application.Run(new AdvancedMainForm());
+            Application.Run(new MainFormTemplate());
+            //Application.Run(new MainFormSolved());
+            //Application.Run(new IntermediateMainForm());
+            //Application.Run(new AdvancedMainForm());
         }
     }
 }
