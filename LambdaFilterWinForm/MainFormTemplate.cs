@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using LambdaFilterWinForm.Model;
 namespace LambdaFilterWinForm;
 public partial class MainFormTemplate : Form
@@ -17,8 +16,10 @@ public partial class MainFormTemplate : Form
         }
     }
 
-    //Add button click handlers which send a func to the filter function
+    //1) Add button click handlers which send a func to the filter function
 
-    //Add filter function here, which takes a func that accepts a Plant and returns a bool
 
+    //2) Add the filter function here which
+    // - takes a func which accepts a Plant and returns a bool (you may use a predicate if you prefer)
+    
 }
